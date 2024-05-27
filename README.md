@@ -10,8 +10,8 @@ namespace Temperatura
     public static class ConversorTemperatura
     {
         public static double FahrenheitParaCelsius(double temperatura)
-            //=> (temperatura - 32) / 1.8; // Simulação de falha
-            => Math.Round((temperatura - 32) / 1.8, 2);
+            => (temperatura - 32) / 1.8; // Simulação de falha
+                                         //=> Math.Round((temperatura - 32) / 1.8, 2);
     }
 }
 ```
@@ -19,9 +19,9 @@ namespace Temperatura
 ## Teste Unitário com xUnit
 
 ### Introdução
-Um teste unitário é uma forma de verificar a funcionalidade de componentes específicos do código, denominados unidades de trabalho. Estes testes focam exclusivamente no código sob controle do desenvolvedor, sem envolver infraestruturas externas como bancos de dados ou redes.
+Um teste unitário verifica a funcionalidade de partes do código, chamadas unidades. Estes testes focam no código escrito pelo desenvolvedor, sem envolver partes externas como bancos de dados ou networking.
 
-O xUnit é um framework popular para testes unitários em .NET, compatível com várias versões e integrável a ferramentas como o Visual Studio. Para utilizá-lo, instala-se o pacote NuGet xUnit e o runner correspondente para execução no Visual Studio.
+O xUnit é um framework popular para testes unitários em .NET, compatível com várias versões e integrável a ferramentas como o Visual Studio e Rider..
 
 Os testes com xUnit são organizados usando os atributos **Theory** e **InlineData**, que facilitam a realização de testes parametrizados. Isso permite testar múltiplos cenários em um único método de teste, ampliando a abrangência dos testes com eficiência.
 
@@ -53,10 +53,10 @@ namespace Test.XUnit.Temperatura
 
 ### Resultados dos Testes
 - Teste executado com sucesso
-![alt text](teste.png)
+![alt text](./imgs/erro-testes-1.png)
 
 - Teste executado sem sucesso
-![alt text](erro-testes.png)
+![alt text](./imgs/erro-testes.png)
 
 ## Teste de Integração com NUnit
 
@@ -90,10 +90,10 @@ namespace Temperatura.Testes
 
 ### Resultados dos Testes
 - Teste executado com sucesso
-![alt text](testes-1.png)
+![alt text](./imgs/teste-1.png)
 
 - Teste executado sem sucesso
-![alt text](erro-testes-1.png)
+![alt text](./imgs/erro-testes.png)
 
 ## Testes de Sistema com MSTest
 
@@ -131,7 +131,7 @@ namespace Temperatura.Testes
 
 ### Resultados dos Testes
 - Teste executado com sucesso
-![alt text](teste-2.png)
+![alt text](./imgs/teste-2.png)
 
 - Teste executado sem sucesso
-![Teste de Integração com Sucesso](erro-testes-2.png)
+![Teste de Integração com Sucesso](./imgs/erro-testes-2.png)
